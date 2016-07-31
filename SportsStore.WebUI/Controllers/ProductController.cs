@@ -18,7 +18,7 @@ namespace SportsStore.WebUI.Controllers
             _productRepository = productRepository;
         }
 
-        private const int PageSize = 4;
+        private const int PageSize = 3;
         public ActionResult List(int page = 1)
         {
 
