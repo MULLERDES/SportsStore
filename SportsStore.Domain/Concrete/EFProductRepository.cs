@@ -8,11 +8,9 @@ using SportsStore.Domain.Entities;
 
 namespace SportsStore.Domain.Concrete
 {
-    public class EFProductRepository:IProductRepository
+    public class EfProductRepository:IProductRepository
     {
-        private EFDbContext context = new EFDbContext();
-        public IEnumerable<Product> Products {
-            get { return context.Products; }
-        }
+        private readonly EfDbContext _context = new EfDbContext();
+        public IEnumerable<Product> Products => _context.Products;
     }
 }
