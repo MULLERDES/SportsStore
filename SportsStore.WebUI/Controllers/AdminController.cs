@@ -7,6 +7,7 @@ using SportsStore.Domain.Abstract;
 
 namespace SportsStore.WebUI.Controllers
 {
+    [Authorize]
     public class AdminController :Controller
     {
         private IProductRepository repository;
